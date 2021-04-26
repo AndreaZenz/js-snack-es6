@@ -27,12 +27,18 @@ var biciclette = []
 
 for (var i = 0; i < bici.length; i++) {
     var pesoDelleBici = (bici[i].peso)
-    biciclette.push(parseInt(pesoDelleBici))
+    biciclette.push(pesoDelleBici)
 }
 
 console.log(biciclette);
 
-var min = Math.min( ...biciclette)
+var min = biciclette[0]
+
+for(var i=1; i<biciclette.length; i++){
+    if(biciclette[i] < min){
+        min = biciclette[i];   
+    }
+}
 
 console.log(`${min} è il peso della bicicletta piu leggera`);
 
@@ -80,7 +86,7 @@ for (let i = 0; i < squadreDiCalcio.length; i++) {
 }
 
 for (const {nome, falli_subiti} of squadreDiCalcio){
-    datiSquadreDiCalcio.push(nome, falli_subiti)
+    datiSquadreDiCalcio.push({nome, falli_subiti})
 }
 
 
