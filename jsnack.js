@@ -23,24 +23,25 @@ const bici = [
     }
 ]
 
-var biciclette = []
+// var biciclette = []
 
-for (var i = 0; i < bici.length; i++) {
-    var pesoDelleBici = (bici[i].peso)
-    biciclette.push(pesoDelleBici)
-}
+// for (var i = 0; i < bici.length; i++) {
+//     var pesoDelleBici = (bici[i].peso)
+//     biciclette.push(pesoDelleBici)
+// }
 
-console.log(biciclette);
+// console.log(biciclette);
 
-var min = biciclette[0]
+// var min = biciclette[0]
 
-for(var i=1; i<biciclette.length; i++){
-    if(biciclette[i] < min){
-        min = biciclette[i];   
-    }
-}
+// for(var i=1; i<biciclette.length; i++){
+//     if(biciclette[i] < min){
+//         min = biciclette[i];   
+//     }
+// }
+bici.sort((a, b) => parseFloat(a.peso) - parseFloat(b.peso));
 
-console.log(`${min} è il peso della bicicletta piu leggera`);
+console.log(`la bicicletta ${bici[0].nome} pesa ${bici[0].peso}kg ed è la bicicletta piu leggera`);
 
 
 // Snack2
